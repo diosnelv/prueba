@@ -49,8 +49,13 @@ class ViewController: UIViewController {
             labelResult.text = "\(resultadoParcial)"
         }
         else if (actualOperacion == "/"){
-            resultadoParcial = resultadoParcial / actualNumero
-            labelResult.text = "\(resultadoParcial)"
+            if actualNumero == 0{
+                labelResult.text = "infinito !!"
+                resultadoParcial = 0
+            }else{
+                resultadoParcial = resultadoParcial / actualNumero
+                labelResult.text = "\(resultadoParcial)"
+            }
         }
         
         if op != "=" && resultadoParcial == 0{
